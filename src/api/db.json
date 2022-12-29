@@ -1,0 +1,137 @@
+{
+    "forms" : {
+        "attr": {
+            "action": "#",
+            "target": "_blank",
+            "method": "post",
+            "class": "formClass",
+            "id": "formId",
+            "autocomplete": false,
+            "novalidate": false,
+            "charset": "",
+            "enctype": "multipart/form-data",
+            "name":"formName",
+            "rel": "value"
+        },
+        "data" : [
+            {
+                "type" : "text",
+                "label": "Username",
+                "parentLabelClass": "label",
+                "parentInputClass": "input",
+                "classParent": "container",
+                "idParent": "container",
+                "regex": null,
+                "name": "username",
+                "value": "value",
+                "attrs": {
+                    "data-id": "unique",
+                    "required": false,
+                    "class": "text",
+                    "id": "text",
+                    "placeholder": "Placeholder"
+                }
+            },
+            {
+                "type" : "password",
+                "label": "Password",
+                "parentLabelClass": "label",
+                "parentInputClass": "input",
+                "classParent": "container",
+                "idParent": "container",
+                "value": "value",
+                "rule": "",
+                "attrs": {
+                    "id": "password",
+                    "name": "username",
+                    "required": false,
+                    "class": "password",
+                    "placeholder": "Input your password"
+                }
+            },
+            {
+                "type" : "checkbox",
+                "label": "Checkbox",
+                "parentLabelClass": "label",
+                "parentInputClass": "input",
+                "classParent": "container",
+                "idParent": "container",
+                "value": true,
+                "required": false,
+                "rule": "",
+                "class": "checkbox",
+                "id": "checkbox",
+                "name": "checkbox",
+                "attributes": {
+                    "data-id": "unique"
+                }
+            },
+            {
+                "type": "select",
+                "label": "Pilih opsi",
+                "parentLabelClass": "label",
+                "parentInputClass": "input",
+                "classParent": "container",
+                "idParent": "container",
+                "name": "selectbox",
+                "lists": [
+                    {
+                        "isDisabled": false,
+                        "id": 11234556,
+                        "value": "Please select the value from here"
+                    },
+                    {
+                        "isDisabled": false,
+                        "id": 12345,
+                        "value": "Hello World"
+                    },
+                    {
+                        "isDisabled": false,
+                        "id": 45678,
+                        "value": "Goodbye World"
+                    }
+                ],
+                "selected": ""
+            },
+            {
+                "type": "button",
+                "name": "button",
+                "behaviour": "submit",
+                "value": "button value",
+                "disabled": false,
+                "parentInputClass": "input",
+                "classParent": "container",
+                "idParent": "container",
+                "autofocus": false,
+                "isIcon": false,
+                "formRefer": "#form_id",
+                "icon": {
+                    "data": null
+                }
+            },
+            {
+                "type": "button2",
+                "name": "button",
+                "behaviour": "submit",
+                "value": "button value",
+                "disabled": false,
+                "parentInputClass": "input",
+                "classParent": "container",
+                "idParent": "container",
+                "autofocus": false,
+                "isIcon": false,
+                "icon": {
+                    "data": {
+                        "path": "url",
+                        "name": "icon",
+                        "class": "iconClass",
+                        "id": "idClass"
+                    }
+                }
+            },
+            {
+                "type": "input:button"
+            }
+        ]
+    }
+  }
