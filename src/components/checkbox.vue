@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { defineEmits, defineProps } from "vue";
+import { defineEmits } from "vue";
 
 defineProps({
   modelValue: {
@@ -26,12 +26,7 @@ defineEmits(['update:modelValue']);
        <label :for="checkbox?.name">{{ checkbox?.label }}</label>
      </div>
      <div :class="checkbox?.parentInputClass">
-        <input type="checkbox" :name="checkbox?.name" :id="checkbox?.id" :value="checkbox?.value"   @input="$emit('update:modelValue', ($event.target as HTMLTextAreaElement).value)">
+        <input type="checkbox" :name="checkbox?.name" :id="checkbox?.id" :value="checkbox?.value"   @input="$emit('update:modelValue', ($event.target).value)">
      </div>
   </div>
 </template>
-<style scoped>
-  .container{
-    display: flex;
-  }
-</style>
