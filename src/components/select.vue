@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { defineEmits, defineProps } from "vue";
+import { defineEmits } from "vue";
 
 defineProps({
   modelValue: {
@@ -33,14 +33,10 @@ defineEmits(['update:modelValue']);
                 :key="list.id"
                 :value="list.value"
                 :disabled="list.isDisabled"
+                v-bind="list.attrs"
                 >{{  list.value  }}
             </option>
         </select>
      </div>
   </div>
 </template>
-<style scoped>
-  .container{
-    display: flex;
-  }
-</style>

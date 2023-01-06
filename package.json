@@ -13,7 +13,8 @@
     "dummy:db": "json-server --watch ./src/api/db.json"
   },
   "dependencies": {
-    "vue": "^3.2.45"
+    "vue": "^3.2.45",
+    "vee-validate": "^4.7.3"
   },
   "devDependencies": {
     "@types/jsdom": "^20.0.1",

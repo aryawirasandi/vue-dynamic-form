@@ -1,8 +1,11 @@
 <script setup lang="ts">
-   import { defineProps, defineEmits } from 'vue';
-   const props =defineProps({
+import {defineEmits} from 'vue';
+   const props = defineProps({
      input: {
       type : Object,
+     },
+     radio:{
+       type: Object
      },
      classParent: {
       type : String,
@@ -21,6 +24,14 @@
    function isCheckbox():boolean{
       return  props.input?.type === "checkbox";
    }
+   function isRadio():boolean{
+     return props.input?.type === "radio"
+   }
+
+   function isFile(){
+     return props.input?.type === "file"
+   }
+
 </script>
 <template>
    <div :class="input?.classParent" :id="input?.idParent">
@@ -29,19 +40,15 @@
      </div>
      <div :class="input?.parentInputClass">
       <input 
-        :type="input?.type"
-        :name="input?.name"
-        :value="input?.value"
-        :checked="input?.value"
-        @input="!isCheckbox() ? $emit('update:modelValue', ($event.target as HTMLTextAreaElement).value) : null"
-        @change="isCheckbox() ? $emit('update:modelValue', ($event.target as HTMLInputElement).checked) : null"
-        v-bind="input?.attrs"
+          :type="input?.type"
+          :name="input?.name"
+          :value="modelValue"
+          :checked="input?.value"
+          @input="!isCheckbox() ? $emit('update:modelValue', ($event.target).value) : isFile() ?  $emit('update:modelValue', ($event.target).files ) : null"
+          @change="isCheckbox() ? $emit('update:modelValue', ($event.target).checked) : isRadio() ? $emit('update:modelValue', ($event.target).value) : null"
+          v-bind="input?.attrs"
         />
+       {{ modelValue }}
      </div>
    </div>
 </template>
-<style scoped>
-  .container{
-    display: flex;
-  }
-</style>

@@ -1,10 +1,5 @@
 <script setup lang="ts">
-import { defineEmits, defineProps } from "vue";
-
 defineProps({
-  modelValue: {
-    type: String,
-  },
   button: {
     type: Object,
   },
@@ -18,7 +13,6 @@ defineProps({
   },
 });
 
-defineEmits(['update:modelValue']);
 </script>
 <template>
      <div :class="button?.classParent" :id="button?.idParent">
@@ -34,7 +28,9 @@ defineEmits(['update:modelValue']);
         :form="button?.formRefer"
         >
         {{ button?.value }}
-        <i></i>
+        <template  v-if="button?.isIcon">
+          <i></i>
+        </template>
       </button>
      </div>
    </div>

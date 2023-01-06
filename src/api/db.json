@@ -1,11 +1,11 @@
 {
     "forms" : {
         "attr": {
-            "action": "#",
+            "action": "",
             "target": "_blank",
             "method": "post",
             "class": "formClass",
-            "id": "formId",
+            "id": "form_id",
             "autocomplete": false,
             "novalidate": false,
             "charset": "",
@@ -13,7 +13,7 @@
             "name":"formName",
             "rel": "value"
         },
-        "data" : [
+        "fields" : [
             {
                 "type" : "text",
                 "label": "Username",
@@ -41,6 +41,7 @@
                 "idParent": "container",
                 "value": "value",
                 "rule": "",
+                "name": "password",
                 "attrs": {
                     "id": "password",
                     "name": "username",
@@ -68,17 +69,20 @@
             },
             {
                 "type": "select",
-                "label": "Pilih opsi",
+                "label": "option",
                 "parentLabelClass": "label",
                 "parentInputClass": "input",
                 "classParent": "container",
                 "idParent": "container",
-                "name": "selectbox",
+                "name": "select",
                 "lists": [
                     {
-                        "isDisabled": false,
+                        "isDisabled": true,
                         "id": 11234556,
-                        "value": "Please select the value from here"
+                        "value": "----- option -----",
+                        "attrs": {
+                            "selected" : true
+                        }
                     },
                     {
                         "isDisabled": false,
@@ -94,17 +98,96 @@
                 "selected": ""
             },
             {
+                "type" : "radio",
+                "regex": null,
+                "value": "",
+                "fields": [
+                    {
+                        "id": 5511,
+                        "label": "Radio 1",
+                        "parentLabelClass": "label",
+                        "parentInputClass": "input",
+                        "classParent": "container",
+                        "idParent": "container",
+                        "name": "option",
+                        "attrs": {
+                            "type" : "radio",
+                            "data-id": "unique",
+                            "required": false,
+                            "class": "radio 1",
+                            "id": "radio 1",
+                            "value": "radio 1",
+                            "placeholder": "Placeholder"
+                        }
+                    },
+                    {
+                        "id": 5512,
+                        "label": "Radio 2",
+                        "parentLabelClass": "label",
+                        "parentInputClass": "input",
+                        "classParent": "container",
+                        "idParent": "container",
+                        "name": "option",
+                        "attrs": {
+                            "type" : "radio",
+                            "data-id": "unique",
+                            "required": false,
+                            "class": "radio 2",
+                            "id": "radio 2",
+                            "value": "radio 2",
+                            "placeholder": "Placeholder"
+                        }
+                    },
+                    {
+                        "id": 5512,
+                        "label": "Radio 3",
+                        "parentLabelClass": "label",
+                        "parentInputClass": "input",
+                        "classParent": "container",
+                        "idParent": "container",
+                        "name": "option",
+                        "attrs": {
+                            "type" : "radio",
+                            "data-id": "unique",
+                            "required": false,
+                            "class": "radio 3",
+                            "id": "radio 3",
+                            "value": "radio 3",
+                            "placeholder": "Placeholder"
+                        }
+                    }
+                ]
+            },
+            {
+                "type" : "file",
+                "label": "Gambar",
+                "parentLabelClass": "label",
+                "parentInputClass": "input",
+                "classParent": "container-image",
+                "idParent": "container-image",
+                "regex": null,
+                "name": "username",
+                "attrs": {
+                    "data-id": "unique",
+                    "required": false,
+                    "class": "text",
+                    "id": "text",
+                    "placeholder": "Placeholder"
+                }
+            },
+            {
                 "type": "button",
                 "name": "button",
                 "behaviour": "submit",
                 "value": "button value",
                 "disabled": false,
-                "parentInputClass": "input",
+                "class": "btn",
+                "id": "btn",
+                "parentInputClass": "button-container",
                 "classParent": "container",
                 "idParent": "container",
                 "autofocus": false,
                 "isIcon": false,
-                "formRefer": "#form_id",
                 "icon": {
                     "data": null
                 }
